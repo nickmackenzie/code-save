@@ -1,8 +1,28 @@
+:root {
+  --main-bg: #1f253d;
+  --sec-bg: #394264;
+  --hglt-bg: #33A8AB;
+  --main-txt: #FFFFFF;
+  --lght-hover: #4c5575;
+}
+
+* {
+  color: white;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: var(--main-bg);
 }
 
 a {
   color: #00B7FF;
+}
+
+.row {
+  width: 400px;
+  background-color: var(--sec-bg);
+  color: var(--main-txt);
+  font-size: 1.2rem;
 }

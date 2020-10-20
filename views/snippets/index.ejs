@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- My Style Sheet -->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- Cirrus Framework -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/cirrus-ui@0.5.5/dist/cirrus.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="row">
+        <div class="add">
+            <form action="/snippets" method="POST">
+                <label for="language">Syntax:</label>
+                <input name="language" type="text">
+                <label for="name">Name of snippet:</label>
+                <input name="name" type="text">
+                <label for="tags">Tags:</label>
+                <input name="tags" type="text">
+                <label for="snippet">Code:</label>
+                <textarea name="snippet"></textarea>
+                <input type="radio" value="true" name="favorite">
+                <label for="favorite">Favorite</label>
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+    <div class="display"> <% language.forEach(function(t) { %>
+
+        <td> <%= t.language %></td>
+
+        </tr>
+        <% }) %>
+    </div>
+
+</body>
+
+</html>
