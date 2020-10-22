@@ -16,7 +16,7 @@ textarea {
 
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
   background-color: var(--main-bg);
 }
 
@@ -25,12 +25,17 @@ a {
 }
 
 .row {
-  width: 400px;
+  margin: 10px;
+  padding: 10px;
   background-color: var(--sec-bg);
   color: var(--main-txt);
   font-size: 1.2rem;
 }
 
 .display {
-  width: 400px;
+  width: 600px;
+}
+
+.container {
+  width: 700px;
 }

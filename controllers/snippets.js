@@ -1,7 +1,6 @@
 let Snippets = require('../models/snippets')
 
 function index(req, res) {
-    console.log("hello")
     Snippets.find({}, function (err, language) {
         res.render('snippets/index', {
             language
