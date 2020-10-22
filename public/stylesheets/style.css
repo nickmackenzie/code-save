@@ -10,6 +10,10 @@
   color: white;
 }
 
+textarea {
+  color: black;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -25,4 +29,8 @@ a {
   background-color: var(--sec-bg);
   color: var(--main-txt);
   font-size: 1.2rem;
+}
+
+.display {
+  width: 400px;
 }

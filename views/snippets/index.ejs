@@ -16,6 +16,16 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
         rel="stylesheet">
+    <!-- JsHighlight -->
+
+    <script
+        src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js">
+    </script>
+    <link rel='stylesheet' href='/stylesheets/highlight.css' />
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
 </head>
 
 <body>
@@ -38,9 +48,10 @@
     </div>
     <div class="display"> <% language.forEach(function(t) { %>
 
-        <td> <%= t.language %></td>
-
-        </tr>
+        <td> Syntax: <%= t.language %><br></td>
+        <td> Name: <%= t.name %></td>
+        <pre><code><%= t.snippet %></code></pre>
+        <br> </tr>
         <% }) %>
     </div>
 
