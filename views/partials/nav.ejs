@@ -1,19 +1,18 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
+        <a class="navbar-item" href="#">
 
-            <span class="has-text-weight-bold" id="logo">SnippyCode</span>
-        </a>
+            <span class="has-text-weight-bold" id="logo">SNIPPY&lt;code&gt;
+                <div class="navbar-end">
+                    <div class="buttons">
+                        <% if (user) { %>
+                        <a class="button is-primary" href="/logout">Log
+                            Out</a>
+                        <% } else { %>
+                        <a class="button is-primary" href="/auth/google">Login
+                            with
+                            Google</a>
+                        <% } %></a>
     </div>
-    <div class="navbar-end">
-        <div class="buttons">
-            <% if (user) { %>
-            <a class="button is-primary" href="/logout">Log Out</a>
-            <% } else { %>
-            <a class="button is-primary" href="/auth/google">Login
-                with
-                Google</a>
-            <% } %></a>
-        </div>
     </div>
 </nav>

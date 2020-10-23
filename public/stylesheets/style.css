@@ -7,8 +7,14 @@
   --lght-hover: #4c5575;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  background-color: rgb(144, 144, 144);
+  background-color: rgb(240, 240, 240);
+  height: 100%;
+  color: white;
 }
 
 #logo {
@@ -17,16 +23,66 @@ body {
 }
 
 .navbar {
-  border-bottom: 2px black solid;
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
 }
 
 pre {
   margin: 0;
-  padding: 0
+  padding: 0;
+  border-radius: 8px;
 }
 
-.code-block {
-  background-color: #eee;
+.box {
+
   max-width: 400px;
   margin: 20px;
+  padding: 20px;
+}
+
+label {
+  color: black;
+}
+
+.panel {
+  width: 200px;
+  background-color: white;
+}
+
+
+.parent {
+  display: grid;
+  grid-template-columns: minmax(150px, 15%) 1fr;
+}
+
+
+.menu-wrap {
+  background-color: white;
+}
+
+.yellow {
+  padding: 0;
+
+}
+
+.menu {
+  height: 100vh;
+}
+
+.menu-label {
+  padding: 10px;
+  font-size: 1.1rem;
+}
+
+#modal-btn {
+  margin: 10px;
+}
+
+.menu-list {
+
+  color: black;
+}
+
+h1 {
+  color: black;
 }

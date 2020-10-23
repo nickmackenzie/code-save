@@ -1,0 +1,14 @@
+<div class="menu-wrap">
+    <% if (user) { %>
+    <button class="button is-primary" id="modal-btn">New Snippet</button>
+    <aside class="menu">
+
+        <p class="menu-label">Languages: </p>
+        <ul class="menu-list"><% snippet.forEach(function(t) { %>
+            <li> <a href=""> <%= t.language %></a></li><br>
+
+            <% }) %>
+            <p class="menu-label">Snippet Names: </p>
+            <p class="menu-label">Tags: </p>
+            <% } %>
+</div>

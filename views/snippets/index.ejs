@@ -2,10 +2,23 @@
 
 <%- include('../partials/nav') %>
 
-<%- include('../partials/modal') %>
-<%- include('../partials/code-block') %>
 
+
+
+
+
+<div class="parent">
+    <div class="section yellow">
+        <%- include('../partials/panel') %>
+    </div>
+    <div class="section purple">
+        <%- include('../partials/code-block') %>
+    </div>
+</div>
+<%- include('../partials/modal') %>
+<script src="/javascripts/modal.js">
+</script>
 </body>
-<script defer src="/javascripts/modal.js"></script>
+
 
 </html>

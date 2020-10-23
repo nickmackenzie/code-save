@@ -35,17 +35,19 @@ function index(req, res) {
 //         });
 // }
 
-function addSnip(req, res) {
-    for (let key in req.body) {
-        if (req.body[key] === '') delete req.body[key]
-    };
-    if (req.body.tags) req.body.tags = req.body.tags.split(' ');
-    const snip = new Snippets(req.body)
-    snip.save(function (err) {
-        if (err) return res.render('snippets/index')
-        res.redirect('/snippets')
-    })
-}
+// function addSnip(req, res) {
+//     for (let key in req.body) {
+//         if (req.body[key] === '') delete req.body[key]
+//     };
+//     if (req.body.tags) req.body.tags = req.body.tags.split(' ');
+//     const snip = new Snippets(req.body)
+//     console.log("hshshsh", req.body)
+//     req.tags.push(req.body)
+//     snip.save(function (err) {
+//         if (err) return res.render('snippets/index')
+//         res.redirect('/snippets')
+//     })
+// }
 
 // function addSnip(req, res) {
 //     console.log("hello")
@@ -69,14 +71,13 @@ function addSnip(req, res) {
     };
     if (req.body.tags) req.body.tags = req.body.tags.split(' ');
     Users.find({}, function (err, users) {
+        console.log('req', req.body)
         console.log("something", users)
         users
     })
 
     const snip = new Snippets(req.body)
-
-    console.log("hello", req.query.name)
-
+    snip.categories.push(req.body)
     snip.google.push(req.user)
     snip.save(function (err) {
         if (err) return res.render('snippets/index')
@@ -84,6 +85,23 @@ function addSnip(req, res) {
     })
 }
 
+// function addSnip(req, res) {
+//     for (let key in req.body) {
+//         if (req.body[key] === '') delete req.body[key]
+//     };
+//     if (req.body.tags) req.body.tags = req.body.tags.split(' ');
+//     Users.findById(req.params.id, function (err, flight) {
+//         Ticket.find({
+//             flight: flights._id
+//         }, function (err, tickets) {
+//             res.render('flights/ticket', {
+//                 flight: flight,
+//                 tickets: tickets
+//             })
+//         })
+
+//     })
+// }
 
 
 

@@ -1,15 +1,28 @@
 <div class="display">
     <% if (user) { %>
-    <% snippet.forEach(function(t) { %>
-    <div class="code-block">
-        <td> Syntax: <%= t.language %><br></td>
-        <td> Name: <%= t.name %></td>
-        <pre><code data-lang="<%= t.language %>"><%= t.snippet %></code></pre>
-        <br> </tr>
-    </div>
-    <% }) %>
-    <% } else { %>
-    <h1>Login to see Snippets</h1>
-    <% } %>
+
+    <tr>
+        <% snippet.forEach(function(t) { %>
+
+        <div class="box">
+
+            <h1 class="title is-4">
+                <td> Syntax: <%= t.language %><br></td>
+            </h1>
+            <h1 class="title is-4">
+                <td> Name: <%= t.name %></td>
+            </h1>
+
+            <pre><code data-lang="<%= t.language %>"><%= t.snippet %></code></pre>
+
+            <br>
+
+    </tr>
+</div>
+</div>
+<% }) %>
+<% } else { %>
+<h1>Login to see Snippets</h1>
+<% } %>
 </div>
 </div>
