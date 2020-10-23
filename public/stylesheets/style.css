@@ -7,6 +7,10 @@
   --lght-hover: #4c5575;
 }
 
+body {
+  background-color: rgb(144, 144, 144);
+}
+
 #logo {
   font-size: 1.8rem;
 
@@ -14,4 +18,15 @@
 
 .navbar {
   border-bottom: 2px black solid;
+}
+
+pre {
+  margin: 0;
+  padding: 0
+}
+
+.code-block {
+  background-color: #eee;
+  max-width: 400px;
+  margin: 20px;
 }
