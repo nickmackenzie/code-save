@@ -1,64 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include('../partials/header') %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<%- include('../partials/nav') %>
 
-    <!-- Google Fonts -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+<%- include('../partials/modal') %>
+<%- include('../partials/code-block') %>
 
-    <!-- CSS Reset -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-
-    <!-- Milligram CSS -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
-
-    <!-- JsHighlight -->
-
-    <script
-        src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js">
-    </script>
-    <link rel='stylesheet' href='/stylesheets/highlight.css' />
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script>
-    <!-- My Style Sheet -->
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="add">
-                <form action="/snippets" method="POST">
-                    <label for="language">Syntax:</label>
-                    <input name="language" type="text">
-                    <label for="name">Name of snippet:</label>
-                    <input name="name" type="text">
-                    <label for="tags">Tags:</label>
-                    <input name="tags" type="text">
-                    <label for="snippet">Code:</label>
-                    <textarea name="snippet"></textarea>
-                    <input type="radio" value="true" name="favorite">
-                    <label for="favorite">Favorite</label>
-                    <input type="submit">
-                </form>
-            </div>
-        </div>
-        <div class="display"> <% language.forEach(function(t) { %>
-
-            <td> Syntax: <%= t.language %><br></td>
-            <td> Name: <%= t.name %></td>
-            <pre><code><%= t.snippet %></code></pre>
-            <br> </tr>
-            <% }) %>
-        </div>
-    </div>
 </body>
+<script defer src="/javascripts/modal.js"></script>
 
 </html>

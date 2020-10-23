@@ -1,0 +1,15 @@
+<div class="display">
+    <% if (user) { %>
+    <% snippet.forEach(function(t) { %>
+    <div class="code-block">
+        <td> Syntax: <%= t.language %><br></td>
+        <td> Name: <%= t.name %></td>
+        <pre><code data-lang="<%= t.language %>"><%= t.snippet %></code></pre>
+        <br> </tr>
+    </div>
+    <% }) %>
+    <% } else { %>
+    <h1>Login to see Snippets</h1>
+    <% } %>
+</div>
+</div>

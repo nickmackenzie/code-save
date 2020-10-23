@@ -1,24 +1,34 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-
 const tagSchema = new Schema({
-    tags: []
+    tags: [String]
 })
+const userSchema = new Schema({
+    googleId: String,
 
+})
 const snippetSchema = new Schema({
     snippet: String,
     language: String,
     name: String,
     categories: [tagSchema],
     favorite: Boolean,
-    google: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Users'
-    }]
-
+    user: [userSchema]
 })
 
 
 
-module.exports = mongoose.model("snippets", snippetSchema)
+
+// Google Id
+
+//Tags/Categories
+
+
+
+
+
+
+
+
+module.exports = mongoose.model("users", snippetSchema)

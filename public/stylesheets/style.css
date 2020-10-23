@@ -1,41 +1,17 @@
 :root {
-  --main-bg: #1f253d;
-  --sec-bg: #394264;
+
+  --main-bg: #001f3f;
+  --sec-bg: #043B5B;
   --hglt-bg: #33A8AB;
-  --main-txt: #FFFFFF;
+  --main-txt: #0d0d0d;
   --lght-hover: #4c5575;
 }
 
-* {
-  color: white;
+#logo {
+  font-size: 1.8rem;
+
 }
 
-textarea {
-  color: black;
-}
-
-body {
-  padding: 50px;
-
-  background-color: var(--main-bg);
-}
-
-a {
-  color: #00B7FF;
-}
-
-.row {
-  margin: 10px;
-  padding: 10px;
-  background-color: var(--sec-bg);
-  color: var(--main-txt);
-  font-size: 1.2rem;
-}
-
-.display {
-  width: 600px;
-}
-
-.container {
-  width: 700px;
+.navbar {
+  border-bottom: 2px black solid;
 }
