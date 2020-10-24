@@ -3,14 +3,23 @@ let Users = require('../models/users')
 let Languages = require('../models/languages')
 
 function index(req, res) {
+
+
+
     Users.find({}, function (err, language) {
-        Snippets.find({}, function (err, snippet) {
+
+        Snippets.find({
+
+
+        }, function (err, snippet) {
+
             res.render('snippets/index', {
                 language,
                 snippet,
                 user: req.user,
                 name: req.query.name,
                 googleId: req.query.googleId
+
             })
         })
 
@@ -61,29 +70,45 @@ function index(req, res) {
 
 //     })
 
-// }
+// // }
 
 function addSnip(req, res) {
-
-
+    console.log(req.body)
     for (let key in req.body) {
         if (req.body[key] === '') delete req.body[key]
     };
     if (req.body.tags) req.body.tags = req.body.tags.split(' ');
-    Users.find({}, function (err, users) {
-        console.log('req', req.body)
-        console.log("something", users)
-        users
+    const snip = new Snippets({
+        google: req.user.googleId
     })
 
-    const snip = new Snippets(req.body)
     snip.categories.push(req.body)
-    snip.google.push(req.user)
+
+    console.log("snip", snip)
     snip.save(function (err) {
         if (err) return res.render('snippets/index')
         res.redirect('/snippets')
     })
 }
+// function deleteSnip(req, res) {
+//     console.log(req.params.id)
+//     Snippets.deleteOne(req.params.id)
+//     res.redirect('/snippets')
+// }
+
+function deleteSnip(req, res) {
+    console.log(req.params.id)
+    Snippets.deleteOne({
+        _id: req.params.id
+    }, (error) => {
+        if (!error) {
+            console.log("did this delete?")
+            res.redirect('/snippets')
+        }
+    })
+
+}
+
 
 // function addSnip(req, res) {
 //     for (let key in req.body) {
@@ -108,5 +133,23 @@ function addSnip(req, res) {
 
 module.exports = {
     index,
-    addSnip
+    addSnip,
+    deleteSnip
 }
+
+
+// function addSnip(req, res) {
+//     const snip = new Snippets(req.body)
+//     Users.find({}, function (err, user) {
+//         Snippets.find({}, function (err, tickets) {
+//             let googleId = user[0].googleId
+//             console.log("user", user[0].googleId, "snippet", tickets)
+//             console.log(req.params)
+//             snip.google.push(googleId)
+//             snip.save(function (err) {
+//                 if (err) return res.render('snippets/index')
+//                 res.redirect('/snippets')
+//             })
+//         })
+// //     })
+// }

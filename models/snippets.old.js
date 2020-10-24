@@ -13,7 +13,7 @@ const snippetSchema = new Schema({
     categories: [tagSchema],
     favorite: Boolean,
     google: {
-        type: Schema.Types.ObjectId,
+        type: Schema.Type.ObjectId,
         ref: 'Users'
     }
 

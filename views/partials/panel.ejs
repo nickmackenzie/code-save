@@ -1,14 +1,40 @@
 <div class="menu-wrap">
     <% if (user) { %>
-    <button class="button is-primary" id="modal-btn">New Snippet</button>
+    <button class="button is-primary" id="modal-btn">
+        <bold>New Snippet</bold>
+    </button>
     <aside class="menu">
+        <p class="menu-label">
+            <bold> Languages:</bold>
+        </p>
+        <ol>
 
-        <p class="menu-label">Languages: </p>
-        <ul class="menu-list"><% snippet.forEach(function(t) { %>
-            <li> <a href=""> <%= t.language %></a></li><br>
-
-            <% }) %>
-            <p class="menu-label">Snippet Names: </p>
-            <p class="menu-label">Tags: </p>
-            <% } %>
+            <li> <img class="icon" src="/images/bash.png" alt="">Bash</li>
+            <li> <img class="icon" src="/images/c++.png" alt="">C++</li>
+            <li><img class="icon" src="/images/css.svg" alt="">CSS</li>
+            <li><img class="icon" src="/images/ejs.svg" alt="">EJS</li>
+            <li><img class="icon" src="/images/html.svg" alt="">HTML</li>
+            <li><img class="icon" src="/images/ini.png" alt="">.ini</li>
+            <li><img class="icon" src="/images/java.svg" alt="">Java</li>
+            <li><img class="icon" src="/images/javascript.svg" alt="">Javasript
+            </li>
+            <li><img class="icon" src="/images/json.svg" alt="">Json</li>
+            <li><img class="icon" src="/images/lua.svg" alt="">Lua</li>
+            <li><img class="icon" src="/images/markdown.svg" alt="">Markdown
+            </li>
+            <li><img class="icon" src="/images/php.svg" alt="">PHP</li>
+            <li><img class="icon" src="/images/ython.svg" alt="">Phython</li>
+            <li><img class="icon" src="/images/sass.png" alt="">Scss</li>
+            <li><img class="icon" src="/images/sql.png" alt="">Sql</li>
+            <li><img class="icon" src="/images/swift.svg" alt="">Swift</li>
+            <li><img class="icon" src="/images/text.svg" alt="">Text</li>
+            <li><img class="icon" src="/images/typescript.svg" alt="">Typescript
+            </li>
+            <li><img class="icon" src="/images/http.svg" alt="">http</li>
+            <li><img class="icon" src="/images/nodejs.svg" alt="">nodeJs</li>
+            <li><img class="icon" src="/images/ruby.svg" alt="">Ruby</li>
+        </ol>
+        <p class="menu-label">Snippet Names: </p>
+        <p class="menu-label">Tags: </p>
+        <% } %>
 </div>

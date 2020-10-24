@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var methodOverride = require('method-override')
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var session = require('express-session');
 var passport = require('passport');
@@ -35,6 +35,7 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(methodOverride("_method"));
 app.use('/', indexRouter);
 app.use('/snippets', snippetRouter);
 

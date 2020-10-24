@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var snipCntrl = require('../controllers/snippets')
+var methodOverride = require('method-override')
 
 /* GET users listing. */
 
@@ -8,6 +9,7 @@ router.post('/', snipCntrl.addSnip)
 
 router.get('/', snipCntrl.index);
 
+router.delete('/:id', snipCntrl.deleteSnip)
 
 
 

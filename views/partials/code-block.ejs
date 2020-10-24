@@ -3,21 +3,26 @@
 
     <tr>
         <% snippet.forEach(function(t) { %>
+        <form action="/snippets/<%= t.id %>?_method=DELETE" class="delete-form"
+            method="POST">
+            <div class="box">
+                <h1 class="title is-4">
 
-        <div class="box">
+                    <button href="/snippets/<%= t.id %>"
+                        class="delete"></button>
+        </form>
 
-            <h1 class="title is-4">
-                <td> Syntax: <%= t.language %><br></td>
-            </h1>
-            <h1 class="title is-4">
-                <td> Name: <%= t.name %></td>
-            </h1>
 
+        <td> Syntax: <%= t.language %><br></td>
+        <td> Syntax: <%= t %><br></td>
+        <h1 class="title is-4">
+            <td> Name: <%= t.name %></td>
+        </h1>
+        <div class="code-block">
             <pre><code data-lang="<%= t.language %>"><%= t.snippet %></code></pre>
 
-            <br>
-
     </tr>
+
 </div>
 </div>
 <% }) %>

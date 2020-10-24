@@ -18,8 +18,19 @@ body {
 }
 
 #logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px;
+  letter-spacing: 1px;
   font-size: 1.8rem;
+}
 
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px;
 }
 
 .navbar {
@@ -34,7 +45,6 @@ pre {
 }
 
 .box {
-
   max-width: 400px;
   margin: 20px;
   padding: 20px;
@@ -85,4 +95,21 @@ label {
 
 h1 {
   color: black;
+}
+
+
+#delete-btn {
+  margin-left: 350px;
+
+
+}
+
+#last-snippy {
+  margin-bottom: 5px;
+  opacity: .7;
+}
+
+li {
+  color: black;
+  font-size: 1.2rem;
 }
