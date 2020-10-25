@@ -45,7 +45,8 @@ pre {
 }
 
 .box {
-  max-width: 400px;
+
+  max-width: 500px;
   margin: 20px;
   padding: 20px;
 }
@@ -112,4 +113,31 @@ h1 {
 li {
   color: black;
   font-size: 1.2rem;
+}
+
+.login-box {
+  display: grid;
+  place-items: center;
+}
+
+#box-logo {
+  width: 72px;
+}
+
+
+code {
+  max-width: 600px;
+  max-height: 400px;
+  min-height: 50px;
+}
+
+#delete-btn {
+  margin-left: 450px;
+  position: relative;
+}
+
+.snippet-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }

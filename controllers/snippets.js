@@ -2,29 +2,63 @@ let Snippets = require('../models/snippets')
 let Users = require('../models/users')
 let Languages = require('../models/languages')
 
-function index(req, res) {
-
-
-
-    Users.find({}, function (err, language) {
-
-        Snippets.find({
-
-
-        }, function (err, snippet) {
-
-            res.render('snippets/index', {
-                language,
-                snippet,
-                user: req.user,
-                name: req.query.name,
-                googleId: req.query.googleId
-
-            })
-        })
+function addSnip(req, res) {
+    console.log(req.body)
+    for (let key in req.body) {
+        if (req.body[key] === '') delete req.body[key]
+    };
+    if (req.body.tags) req.body.tags = req.body.tags.split(' ');
+    const snip = new Snippets({
+        google: req.user.googleId,
+        snippet: req.body.snippet,
+        name: req.body.name,
+        language: req.body.language,
 
     })
+    snip.categories.push(req.body)
+    console.log("snip", snip)
+    snip.save(function (err) {
+        if (err) return res.render('snippets/index')
+        res.redirect('/snippets')
+    })
 }
+
+
+function index(req, res) {
+    Snippets.find({}, function (err, snip) {
+        res.render('snippets/index', {
+            snip,
+            user: req.user,
+            name: req.query.name,
+            googleId: req.query.googleId
+        })
+    })
+}
+
+
+// function index(req, res) {
+//     console.log(typeof req.user)
+//     const x = new Promise(function (resolve, reject) {
+//         let ida = req.user.googleId
+//         resolve(ida)
+//     })
+//     x.then(function (result) {
+//         Snippets.find({
+//             google: result
+//         }, function (err, snippet) {
+//             console.log("this snippet", snippet)
+//             res.render('snippets/index', {
+//                 snippet,
+//                 user: req.user,
+//                 name: req.query.name,
+//                 googleId: req.query.googleId
+//             })
+//         })
+//     })
+
+
+
+// }
 
 
 // function index(req, res) {
@@ -72,24 +106,7 @@ function index(req, res) {
 
 // // }
 
-function addSnip(req, res) {
-    console.log(req.body)
-    for (let key in req.body) {
-        if (req.body[key] === '') delete req.body[key]
-    };
-    if (req.body.tags) req.body.tags = req.body.tags.split(' ');
-    const snip = new Snippets({
-        google: req.user.googleId
-    })
 
-    snip.categories.push(req.body)
-
-    console.log("snip", snip)
-    snip.save(function (err) {
-        if (err) return res.render('snippets/index')
-        res.redirect('/snippets')
-    })
-}
 // function deleteSnip(req, res) {
 //     console.log(req.params.id)
 //     Snippets.deleteOne(req.params.id)

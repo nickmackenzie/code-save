@@ -1,23 +1,32 @@
-<!DOCTYPE html>
-<html>
+<%- include('./partials/header') %>
 
-<head>
-  <title><%= title %></title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
+<div class="login-box">
+  <div class="login-content">
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-icon">SnippyCode</p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <div class="buttons">
 
-<body>
-  <h1><%= title %></h1>
-  <div class="buttons">
 
+            <a class="button is-primary" href="/auth/google"><strong>Login
+                with
+                Google</strong></a>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <a class="button is-primary" href="/auth/google"><strong>Login
-        with
-        Google</strong></a>
-    </a>
   </div>
-  <p>Welcome to SnippyClips</p>
-  <a href="/snippets">Continue</a>
+</div>
+
+<p>Welcome to SnippyClips</p>
+
+
+
 </body>
 
 </html>
