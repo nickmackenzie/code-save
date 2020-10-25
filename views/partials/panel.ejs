@@ -2,13 +2,14 @@
 
     <% if (user) { %>
     <div class="btn-wrap">
-        <a class="button is-danger" href="/logout">Log
-            Out</a>
         <div class="buttons">
-            <button class="button is-success" id="modal-btn">
+            <button class="button is-warning" id="modal-btn">
                 <strong>New Snippet</strong>
             </button>
         </div>
+        <a class="button is-danger" href="/logout">Log
+            Out</a>
+
     </div>
     <aside class="menu">
         <p class="menu-label">
@@ -16,7 +17,7 @@
         </p>
         <ol>
             <% let array1 = [] %>
-            <% snip.forEach(function(t) { %>
+            <% menu.forEach(function(t) { %>
             <% array1.push(t.language) %>
             <% }) %>
             <% let array2 = [...new Set(array1)] %>

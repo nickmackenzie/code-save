@@ -2,6 +2,8 @@ let Snippets = require('../models/snippets')
 let Users = require('../models/users')
 let Languages = require('../models/languages')
 
+
+
 function addSnip(req, res) {
     console.log(req.body)
     for (let key in req.body) {
@@ -21,17 +23,36 @@ function addSnip(req, res) {
     })
 }
 
-
 function index(req, res) {
-    Snippets.find({}, function (err, snip) {
-        res.render('snippets/index', {
-            snip,
-            user: req.user,
-            name: req.query.name,
-            googleId: req.query.googleId
+    console.log(req.params.language)
+    let x = req.params.language
+    Snippets.find({}, function (err, menu) {
+
+        Snippets.find({
+            language: req.params.language
+        }, function (err, snip) {
+            console.log("menu", menu)
+            res.render('snippets/index', {
+                snip,
+                user: req.user,
+                name: req.query.name,
+                googleId: req.query.googleId,
+                menu: menu
+            })
         })
     })
 }
+
+// function index(req, res) {
+//     Snippets.find({}, function (err, menu) {
+//         res.render('snippets/index', {
+//             menu,
+//             user: req.user,
+//             name: req.query.name,
+//             googleId: req.query.googleId
+//         })
+//     })
+// }
 // function index(req, res) {
 //     console.log(req.params.language)
 //     let x = req.params.language
@@ -55,16 +76,17 @@ function languageIndex(req, res) {
     console.log(req.params.language)
     let x = req.params.language
     Snippets.find({}, function (err, menu) {
+
         Snippets.find({
             language: req.params.language
         }, function (err, snip) {
+            console.log("menu", menu)
             res.render('snippets/index', {
                 snip,
                 user: req.user,
                 name: req.query.name,
                 googleId: req.query.googleId,
                 menu: menu
-
             })
         })
     })
@@ -149,13 +171,19 @@ function languageIndex(req, res) {
 // }
 
 function deleteSnip(req, res) {
-    console.log(req.params.id)
+
+    Snippets.findOne({
+        _id: req.params.id
+    }, function (err, lan) {
+        console.log("helllo", lan.language),
+            res.redirect(`/snippets/${lan.language}`)
+    })
     Snippets.deleteOne({
         _id: req.params.id
     }, (error) => {
-        if (!error) {
+        if (error) {
             console.log("did this delete?")
-            res.redirect('/snippets')
+            res.redirect('/snippets/')
         }
     })
 
