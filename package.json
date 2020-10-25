@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "@creativebulma/bulma-collapsible": "^1.0.4",
     "cirrus-ui": "^0.5.5",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",

@@ -13,10 +13,8 @@ function addSnip(req, res) {
         snippet: req.body.snippet,
         name: req.body.name,
         language: req.body.language,
-
     })
     snip.categories.push(req.body)
-    console.log("snip", snip)
     snip.save(function (err) {
         if (err) return res.render('snippets/index')
         res.redirect('/snippets')
@@ -31,6 +29,43 @@ function index(req, res) {
             user: req.user,
             name: req.query.name,
             googleId: req.query.googleId
+        })
+    })
+}
+// function index(req, res) {
+//     console.log(req.params.language)
+//     let x = req.params.language
+//     Snippets({}, function (err, panel) {
+//         return panel
+//     })
+//     Snippets.find({
+//         language: req.params.language
+//     }, function (err, snip) {
+//         res.render('snippets/index', {
+//             snip,
+//             user: req.user,
+//             name: req.query.name,
+//             googleId: req.query.googleId
+
+//         })
+//     })
+// }
+
+function languageIndex(req, res) {
+    console.log(req.params.language)
+    let x = req.params.language
+    Snippets.find({}, function (err, menu) {
+        Snippets.find({
+            language: req.params.language
+        }, function (err, snip) {
+            res.render('snippets/index', {
+                snip,
+                user: req.user,
+                name: req.query.name,
+                googleId: req.query.googleId,
+                menu: menu
+
+            })
         })
     })
 }
@@ -151,7 +186,8 @@ function deleteSnip(req, res) {
 module.exports = {
     index,
     addSnip,
-    deleteSnip
+    deleteSnip,
+    languageIndex
 }
 
 

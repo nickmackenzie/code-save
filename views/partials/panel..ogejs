@@ -1,45 +1,31 @@
 <div class="menu-wrap">
-
-    <% if (user) { %>
-    <div class="btn-wrap">
-        <a class="button is-danger" href="/logout">Log
-            Out</a>
-        <div class="buttons">
-            <button class="button is-success" id="modal-btn">
-                <strong>New Snippet</strong>
-            </button>
-        </div>
-    </div>
-    <aside class="menu">
-        <p class="menu-label">
-            <bold> Languages:</bold>
-        </p>
-        <ol>
-            <% let array1 = [] %>
-            <% snip.forEach(function(t) { %>
-            <% array1.push(t.language) %>
-            <% }) %>
-            <% let array2 = [...new Set(array1)] %>
+    <div class="buttons">
+        <% if (user) { %>
+        <a class="button is-primary" href="/logout"><strong>Log
+                Out</strong></a>
 
 
 
-            <% array2.forEach(function(m) { %>
-            <li> <a href="/snippets/<%= m %>"> <img class="icon"
-                        src="/images/<%= m %>.svg" alt=""> <%= m %>
-            </li>
-            </a>
-            <% }) %>
+        <button class="button is-primary" id="modal-btn">
+            <bold>New Snippet</bold>
+        </button>
+        <aside class="menu">
+            <p class="menu-label">
+                <bold> Languages:</bold>
+            </p>
+            <ol>
 
-            <!-- 
-                <li> <img class="icon" src="/images/bash.png" alt="">Bash</li>
+                <!-- <li> <img class="icon" src="/images/bash.png" alt="">Bash</li>
                 <li> <img class="icon" src="/images/c++.png" alt="">C++</li>
                 <li><img class="icon" src="/images/css.svg" alt="">CSS</li>
                 <li><img class="icon" src="/images/ejs.svg" alt="">EJS</li>
                 <li><img class="icon" src="/images/html.svg" alt="">HTML</li>
                 <li><img class="icon" src="/images/ini.png" alt="">.ini</li>
                 <li><img class="icon" src="/images/java.svg" alt="">Java</li> -->
-            <!--            
-                <li><img class="icon" src="/images/json.svg" alt="">Json</li>
+                <li><img class="icon" src="/images/javascript.svg"
+                        alt="">Javasript
+                </li>
+                <!-- <li><img class="icon" src="/images/json.svg" alt="">Json</li>
                 <li><img class="icon" src="/images/lua.svg" alt="">Lua</li>
                 <li><img class="icon" src="/images/markdown.svg" alt="">Markdown
                 </li>
@@ -56,13 +42,13 @@
                 <li><img class="icon" src="/images/http.svg" alt="">http</li>
                 <li><img class="icon" src="/images/nodejs.svg" alt="">nodeJs
                 </li>
-                <li><img class="icon" src="/images/ruby.svg" alt="">Ruby</li>  -->
-        </ol>
-        <p class="menu-label">Snippet Names: </p>
-        <p class="menu-label">Tags: </p>
-        <% } else { %>
-        <a class="button is-primary" href="/auth/google"><strong>Login
-                with
-                Google</strong></a>
-        <% } %>
-</div>
+                <li><img class="icon" src="/images/ruby.svg" alt="">Ruby</li> -->
+            </ol>
+            <p class="menu-label">Snippet Names: </p>
+            <p class="menu-label">Tags: </p>
+            <% } else { %>
+            <a class="button is-primary" href="/auth/google"><strong>Login
+                    with
+                    Google</strong></a>
+            <% } %>
+    </div>

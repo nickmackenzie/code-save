@@ -11,6 +11,7 @@ router.get('/', snipCntrl.index);
 
 router.delete('/:id', snipCntrl.deleteSnip)
 
+router.get('/:language', snipCntrl.languageIndex)
 
 
 

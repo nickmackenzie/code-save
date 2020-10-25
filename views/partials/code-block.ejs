@@ -8,15 +8,17 @@
             method="POST">
 
             <button class="delete is-medium" id="delete-btn"
-                href="/snippets/<%= t.id %>">
+                href="/snippets/<%= t.language %>">
                 </i></button>
         </form>
         <div class="snippet-info">
             <td>
-                <p class="has-text-weight-bold">Syntax:</p><%= t.language %><br>
+
+                <span id="snippet-data"><%= t.language %></span><br>
             </td>
             <td>
-                <p class="has-text-weight-bold">Name:</p> <%= t.name %>
+
+                <span id=snippet-data><%= t.name %></span>
             </td>
         </div><br>
         <div class="code-block">
