@@ -7,60 +7,44 @@
                 <strong>New Snippet</strong>
             </button>
         </div>
-        <a class="button is-danger" href="/logout">Log
-            Out</a>
+
 
     </div>
     <aside class="menu">
+        <form action="">
+            <p class="control has-icons-left">
+                <input id="search" class="input" type="text"
+                    placeholder="Search">
+                <span class="icon is-left">
+                    <i class="fas fa-search fa-2x" aria-hidden="true"></i>
+                </span>
+
+            </p>
+        </form>
         <p class="menu-label">
-            <bold> Languages:</bold>
+            <bold>Languages:</bold>
         </p>
-        <ol>
+        <ul class="menu-list">
+
             <% let array1 = [] %>
             <% menu.forEach(function(t) { %>
             <% array1.push(t.language) %>
             <% }) %>
             <% let array2 = [...new Set(array1)] %>
-
-
-
             <% array2.forEach(function(m) { %>
-            <li> <a href="/snippets/<%= m %>"> <img class="icon"
-                        src="/images/<%= m %>.svg" alt=""> <%= m %>
+            <li> <a id="link" href="/snippets/<%= m %>"> <img class="icon"
+                        src="/images/<%= m %>.svg" alt=""> <%= m %></a>
             </li>
-            </a>
+
             <% }) %>
 
-            <!-- 
-                <li> <img class="icon" src="/images/bash.png" alt="">Bash</li>
-                <li> <img class="icon" src="/images/c++.png" alt="">C++</li>
-                <li><img class="icon" src="/images/css.svg" alt="">CSS</li>
-                <li><img class="icon" src="/images/ejs.svg" alt="">EJS</li>
-                <li><img class="icon" src="/images/html.svg" alt="">HTML</li>
-                <li><img class="icon" src="/images/ini.png" alt="">.ini</li>
-                <li><img class="icon" src="/images/java.svg" alt="">Java</li> -->
-            <!--            
-                <li><img class="icon" src="/images/json.svg" alt="">Json</li>
-                <li><img class="icon" src="/images/lua.svg" alt="">Lua</li>
-                <li><img class="icon" src="/images/markdown.svg" alt="">Markdown
-                </li>
-                <li><img class="icon" src="/images/php.svg" alt="">PHP</li>
-                <li><img class="icon" src="/images/ython.svg" alt="">Phython
-                </li>
-                <li><img class="icon" src="/images/sass.png" alt="">Scss</li>
-                <li><img class="icon" src="/images/sql.png" alt="">Sql</li>
-                <li><img class="icon" src="/images/swift.svg" alt="">Swift</li>
-                <li><img class="icon" src="/images/text.svg" alt="">Text</li>
-                <li><img class="icon" src="/images/typescript.svg"
-                        alt="">Typescript
-                </li>
-                <li><img class="icon" src="/images/http.svg" alt="">http</li>
-                <li><img class="icon" src="/images/nodejs.svg" alt="">nodeJs
-                </li>
-                <li><img class="icon" src="/images/ruby.svg" alt="">Ruby</li>  -->
-        </ol>
+
+        </ul>
         <p class="menu-label">Snippet Names: </p>
         <p class="menu-label">Tags: </p>
+        <div class="log-out">
+            <a class="button is-danger" href="/logout">Log
+                Out</a></div>
         <% } else { %>
         <a class="button is-primary" href="/auth/google"><strong>Login
                 with

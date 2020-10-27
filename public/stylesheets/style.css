@@ -8,10 +8,11 @@
 } */
 body {
   font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 :root {
-
   --main-bg: #001f3f;
   --sec-bg: #043B5B;
   --hglt-bg: #33A8AB;
@@ -20,12 +21,12 @@ body {
 }
 
 html {
-  height: 100%;
+  height: 100vh;
 }
 
 body {
   background-color: rgb(32, 32, 32);
-  height: 100%;
+
   color: white;
 }
 
@@ -62,12 +63,11 @@ pre {
 
 .box {
   font-family: 'Poppins', sans-serif;
-
   background-color: rgba(0, 0, 0, 0.582);
   color: white;
   max-width: 500px;
   margin: 10px;
-
+  padding: .1rem
 }
 
 label {
@@ -130,11 +130,7 @@ h1 {
 }
 
 
-#delete-btn {
-  margin-left: 350px;
 
-
-}
 
 #last-snippy {
 
@@ -167,7 +163,7 @@ code {
 
 }
 
-#delete-btn {
+.delete-btn {
   margin-left: 450px;
   position: relative;
 }
@@ -179,7 +175,7 @@ code {
   flex-direction: column;
   justify-content: start;
   text-transform: capitalize;
-  line-height: 15px;
+  line-height: 25px;
 }
 
 #yellow {
@@ -193,4 +189,63 @@ code {
   font-size: 1.6rem;
   padding: 0;
   margin: 0;
+}
+
+.fas {
+  padding: 6px;
+}
+
+#link:hover {
+  background-color: rgba(0, 0, 0, 0.445);
+  color: white;
+}
+
+
+.log-out {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#search {
+  opacity: .8;
+}
+
+#search::placeholder {
+  color: black;
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+#search:focus {
+  border: 3px solid #FAD85B;
+  opacity: 1;
+}
+
+.grid {
+  display: flex;
+}
+
+#snippet-data {
+  font-size: 1rem;
+
+}
+
+.edit-form {
+  display: none;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.781);
+  width: 400px;
+  padding: 10px;
+  position: absolute;
+  flex-direction: column;
+}
+
+.fa-sign-in-alt {
+  margin: 10px;
+  opacity: .6;
+}
+
+.fa-sign-in-alt:hover {
+  opacity: 1;
 }

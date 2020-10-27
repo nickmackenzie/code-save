@@ -6,20 +6,18 @@ const axios = require('axios');
 
 
 /* GET users listing. */
-router.get('/edit', function (req, res, next) {
-    res.send('hello');
-});
-
-router.post('/', snipCntrl.addSnip)
-
-router.get('/', snipCntrl.index);
-
-router.delete('/:id', snipCntrl.deleteSnip)
-
-router.get('/:language', snipCntrl.languageIndex)
+// router.get('/:id', function (req, res, next) {
+//     res.send('hello');
+// });
 
 
+async function makeGetRequest() {
 
+    let res = await axios.get('http://localhost:3000/edit/:id');
 
+    let data = res.data;
+    console.log(data);
+}
 
+makeGetRequest();
 module.exports = router;

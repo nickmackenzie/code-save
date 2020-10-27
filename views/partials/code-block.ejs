@@ -3,30 +3,37 @@
 
 <% snip.forEach(function(t) { %>
 <div class="item">
-    <div class="box">
+
+    <div id="code-box" class="box">
         <form action="/snippets/<%= t.id %>?_method=DELETE" class="delete-form"
             method="POST">
-
-            <button class="delete is-medium" id="delete-btn"
+            <button class="delete is-medium delete-btn"
                 href="/snippets/<%= t.id %>">
                 </i></button>
         </form>
-        <div class="snippet-info">
-            <td>
-
-                <span id="snippet-data"><%= t.language %></span><br>
-            </td>
-            <td>
-
-                <span id=snippet-data><%= t.name %></span>
-            </td>
-        </div><br>
+        <div id="editor" class="edit-form">
+            <form><input type="text" name="name" value="<%= t.name %>">
+                <textarea name="snippet" cols="30"
+                    rows="10"><%= t.snippet %></textarea>
+                <input type="submit">
+            </form>
+        </div>
+        <img class="icon" src="/images/<%= t.language %>.svg" alt="">
+        <span id=snippet-data name="name"><%= t.name %></span>
         <div class="code-block">
-            <pre><code data-lang="<%= t.language %>"><%= t.snippet %></code></pre>
+            <pre><code name="snippet" data-lang="<%= t.language %>"><%= t.snippet %></code></pre>
 
         </div>
+        <form action="/edit/<%= t.id %>"><input type="submit" id="edit-btn"
+                value="Edit">
+        </form>
+
+
     </div>
 </div>
+
+
+
 <% }) %>
 <% } else { %>
 <h1>Login to see Snippets</h1>

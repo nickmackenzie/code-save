@@ -14,6 +14,7 @@ require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var snippetRouter = require('./routes/snippets');
+var editRouter = require('./routes/edit')
 
 var app = express();
 
@@ -38,6 +39,7 @@ app.use(passport.session());
 app.use(methodOverride("_method"));
 app.use('/', indexRouter);
 app.use('/snippets', snippetRouter);
+app.use('/edit', editRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

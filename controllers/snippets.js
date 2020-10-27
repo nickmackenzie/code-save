@@ -27,10 +27,7 @@ function index(req, res) {
     console.log(req.params.language)
     let x = req.params.language
     Snippets.find({}, function (err, menu) {
-
-        Snippets.find({
-            language: req.params.language
-        }, function (err, snip) {
+        Snippets.find({}, function (err, snip) {
             console.log("menu", menu)
             res.render('snippets/index', {
                 snip,
@@ -92,7 +89,11 @@ function languageIndex(req, res) {
     })
 }
 
-
+function editSnip(req, res) {
+    res.render('index', {
+        title: 'Express'
+    });
+}
 // function index(req, res) {
 //     console.log(typeof req.user)
 //     const x = new Promise(function (resolve, reject) {
@@ -175,14 +176,12 @@ function deleteSnip(req, res) {
     Snippets.findOne({
         _id: req.params.id
     }, function (err, lan) {
-        console.log("helllo", lan.language),
-            res.redirect(`/snippets/${lan.language}`)
+        res.redirect(`/snippets/${lan.language}`)
     })
     Snippets.deleteOne({
         _id: req.params.id
     }, (error) => {
         if (error) {
-            console.log("did this delete?")
             res.redirect('/snippets/')
         }
     })
@@ -215,7 +214,8 @@ module.exports = {
     index,
     addSnip,
     deleteSnip,
-    languageIndex
+    languageIndex,
+    editSnip
 }
 
 

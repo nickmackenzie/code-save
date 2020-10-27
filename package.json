@@ -7,6 +7,8 @@
   },
   "dependencies": {
     "@creativebulma/bulma-collapsible": "^1.0.4",
+    "axios": "^0.21.0",
+    "bulma": "^0.9.1",
     "bulma-dashboard": "^0.3.1",
     "cirrus-ui": "^0.5.5",
     "cookie-parser": "~1.4.4",

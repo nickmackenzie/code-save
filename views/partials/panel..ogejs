@@ -9,12 +9,13 @@
         <button class="button is-primary" id="modal-btn">
             <bold>New Snippet</bold>
         </button>
+
         <aside class="menu">
             <p class="menu-label">
                 <bold> Languages:</bold>
             </p>
             <ol>
-
+<% snip.forEach(function(t) { %>
                 <!-- <li> <img class="icon" src="/images/bash.png" alt="">Bash</li>
                 <li> <img class="icon" src="/images/c++.png" alt="">C++</li>
                 <li><img class="icon" src="/images/css.svg" alt="">CSS</li>
@@ -22,9 +23,9 @@
                 <li><img class="icon" src="/images/html.svg" alt="">HTML</li>
                 <li><img class="icon" src="/images/ini.png" alt="">.ini</li>
                 <li><img class="icon" src="/images/java.svg" alt="">Java</li> -->
-                <li><img class="icon" src="/images/javascript.svg"
+              <form action="">  <li><img class="icon" src="/images/javascript.svg"
                         alt="">Javasript
-                </li>
+                </li></form>
                 <!-- <li><img class="icon" src="/images/json.svg" alt="">Json</li>
                 <li><img class="icon" src="/images/lua.svg" alt="">Lua</li>
                 <li><img class="icon" src="/images/markdown.svg" alt="">Markdown
