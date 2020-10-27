@@ -7,6 +7,7 @@ var methodOverride = require('method-override')
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var session = require('express-session');
 var passport = require('passport');
+const bodyParser = require('body-parser')
 
 require('dotenv').config()
 require('./config/database');
@@ -40,7 +41,7 @@ app.use(methodOverride("_method"));
 app.use('/', indexRouter);
 app.use('/snippets', snippetRouter);
 app.use('/edit', editRouter);
-
+app.use(bodyParser.json())
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));

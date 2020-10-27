@@ -249,3 +249,17 @@ code {
 .fa-sign-in-alt:hover {
   opacity: 1;
 }
+
+.edit-data {
+  color: white;
+}
+
+#edit-box {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(0, 0, 0, 0.582);
+  color: white;
+  max-width: 350px;
+  margin: 10px;
+  padding: .4rem;
+  text-align: center;
+}
