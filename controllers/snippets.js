@@ -10,13 +10,21 @@ function addSnip(req, res) {
         if (req.body[key] === '') delete req.body[key]
     };
     if (req.body.tags) req.body.tags = req.body.tags.split(' ');
+    console.log(req.body)
     const snip = new Snippets({
         google: req.user.googleId,
         snippet: req.body.snippet,
         name: req.body.name,
         language: req.body.language,
+        categories: req.body
     })
-    snip.categories.push(req.body)
+    let catArray = req.body
+    console.log("heyheyehey", snip)
+    Snippets.findById({
+        id: snip._id
+    }).populate('categories').exec((err, posts) => {
+        console.log("Populated User " + posts);
+    })
     snip.save(function (err) {
         if (err) return res.render('snippets/index')
         res.redirect('/snippets')

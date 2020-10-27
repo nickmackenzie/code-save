@@ -6,18 +6,18 @@ const axios = require('axios');
 
 
 /* GET users listing. */
-// router.get('/:id', function (req, res, next) {
-//     res.send('hello');
-// });
+router.get('/:id', function (req, res, next) {
+    res.send('hello');
+});
 
 
-async function makeGetRequest() {
+// async function makeGetRequest() {
 
-    let res = await axios.get('http://localhost:3000/edit/:id');
+//     let res = await axios.get('http://localhost:3000/edit/:id');
 
-    let data = res.data;
-    console.log(data);
-}
+//     let data = res.data;
+//     console.log(data);
+// }
 
-makeGetRequest();
+// makeGetRequest();
 module.exports = router;
