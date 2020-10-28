@@ -11,21 +11,21 @@
 
     </div>
     <aside class="menu">
-        <form action="">
-            <p class="control has-icons-left">
-                <input id="search" class="input" type="text"
-                    placeholder="Search">
-                <span class="icon is-left">
-                    <i class="fas fa-search fa-2x" aria-hidden="true"></i>
-                </span>
-
-            </p>
-        </form>
+        <div class="search-box">
+            <form action="/search" method="GET">
+                <p class="control has-icons-left">
+                    <input id="search" class="input" type="text" name="search"
+                        placeholder="Search">
+                    <span class="icon is-left">
+                        <i class="fas fa-search fa-2x" aria-hidden="true"></i>
+                    </span>
+                </p>
+            </form>
+        </div>
         <p class="menu-label">
             <bold>Languages:</bold>
         </p>
         <ul class="menu-list">
-
             <% let array1 = [] %>
             <% menu.forEach(function(t) { %>
             <% array1.push(t.language) %>
@@ -46,7 +46,8 @@
         <div class="tags are-normal ">
             <% menu.forEach(function(t) { %>
             <span class="tag is-black">
-                <a href=""> <%= t.categories[0].tags %></a></span>
+                <a href="/search/<%= t.categories[0].tags %>">
+                    <%= t.categories[0].tags %></a></span>
             <% }) %>
         </div>
 

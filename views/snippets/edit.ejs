@@ -13,7 +13,8 @@
     <div class="modal-card">
         <header class="modal-card-head">
             <p class="modal-card-title">Edit a Snippet</p>
-            <button id="close-btn" class="delete" aria-label="close"></button>
+            <a href="/snippets/<%= edit.language %>"><button id="edit-close"
+                    class="delete" aria-label="close"></button></a>
         </header>
         <section id="modal-content" class="modal-card-body">
             <form action="/edit/<%= edit.id %>" method="POST">

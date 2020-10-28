@@ -15,7 +15,9 @@ router.delete('/:id', snipCntrl.deleteSnip)
 
 router.get('/:language', snipCntrl.languageIndex)
 
-
+router.get('/search', function (req, res, next) {
+    res.send("ueeuueuue");
+});
 
 
 

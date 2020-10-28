@@ -16,7 +16,7 @@ require('./config/passport');
 var indexRouter = require('./routes/index');
 var snippetRouter = require('./routes/snippets');
 var editRouter = require('./routes/edit')
-
+var searchRouter = require('./routes/search')
 var app = express();
 
 // view engine setup
@@ -41,6 +41,7 @@ app.use(methodOverride("_method"));
 app.use('/', indexRouter);
 app.use('/snippets', snippetRouter);
 app.use('/edit', editRouter);
+app.use('/search', searchRouter)
 app.use(bodyParser.json())
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

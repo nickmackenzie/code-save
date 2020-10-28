@@ -43,23 +43,28 @@ function languageIndex(req, res) {
         })
     })
 }
+// function searchIndex(req, res) {
+//     let x = req.params.language
+//     let userId = req.user.googleId
+//     Snippets.find({
+//         google: userId
+//     }, function (err, menu) {
+//         Snippets.find({
+//             name: {
+//                 $regex: /^[a-zA-Z0-9_]*$/
+//             }
+//         }, function (err, snip) {
+//             res.render('snippets/index', {
+//                 snip,
+//                 user: req.user,
+//                 name: req.query.name,
+//                 googleId: req.query.googleId,
+//                 menu: menu
+//             })
+//         })
+//     })
+// }
 
-function searchIndex(req, res) {
-    let x = req.params.language
-    Snippets.find({}, function (err, menu) {
-        Snippets.find({
-            language: req.params.language
-        }, function (err, snip) {
-            res.render('snippets/index', {
-                snip,
-                user: req.user,
-                name: req.query.name,
-                googleId: req.query.googleId,
-                menu: menu
-            })
-        })
-    })
-}
 
 function editSnip(req, res) {
 
@@ -109,6 +114,5 @@ module.exports = {
     addSnip,
     deleteSnip,
     languageIndex,
-    editSnip,
-    searchIndex
+    editSnip
 }
