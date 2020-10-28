@@ -79,13 +79,14 @@ function addSnip(req, res) {
     for (let key in req.body) {
         if (req.body[key] === '') delete req.body[key]
     };
-    if (req.body.tags) req.body.tags = req.body.tags.split(' ');
+    // if (req.body.categories) req.body.categories = req.body.categories.split(' ');
+
     const snip = new Snippets({
         google: req.user.googleId,
         snippet: req.body.snippet,
         name: req.body.name,
         language: req.body.language,
-        categories: req.body
+        categories: req.body.categories
     })
     snip.save(function (err) {
         if (err) return res.render('snippets/index')
