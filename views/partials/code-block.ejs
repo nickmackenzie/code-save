@@ -3,14 +3,17 @@
 
 <% snip.forEach(function(t) { %>
 <div class="item">
-
+    <form action="/edit/<%= t.id %>" action="GET"><button type="submit"
+            id="edit-btn"><i class="far fa-edit"></i></button>
+    </form>
     <div id="code-box" class="box">
         <form action="/snippets/<%= t.id %>?_method=DELETE" class="delete-form"
             method="POST">
-            <button class="delete is-medium delete-btn"
+            <button id="circle-btn" class="delete is-medium delete-btn"
                 href="/snippets/<%= t.id %>">
                 </i></button>
         </form>
+
         <div id="editor" class="edit-form">
             <form><input type="text" name="name" value="<%= t.name %>">
                 <textarea name="snippet" cols="30"
@@ -24,9 +27,7 @@
             <pre><code name="snippet" data-lang="<%= t.language %>"><%= t.snippet %></code></pre>
 
         </div>
-        <form action="/edit/<%= t.id %>" action="GET"><input type="submit"
-                id="edit-btn" value="Edit">
-        </form>
+
 
 
     </div>

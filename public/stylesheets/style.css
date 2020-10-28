@@ -164,6 +164,7 @@ code {
 }
 
 .delete-btn {
+  margin-top: 5px;
   margin-left: 300px;
   position: relative;
 }
@@ -262,4 +263,41 @@ code {
   margin: 10px;
   padding: .4rem;
   text-align: center;
+}
+
+#edit-btn {
+  margin: 6px;
+  margin-left: 260px;
+  margin-bottom: 100px;
+  padding-bottom: 100px;
+  padding: 8px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  position: absolute;
+  border-radius: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.tags {
+  padding: 4px;
+  margin: 4px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.404);
+  border-radius: 6px;
+}
+
+.tags a {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.404);
+  text-transform: uppercase;
+}
+
+
+#circle-btn:hover {
+  background-color: #F14668;
 }

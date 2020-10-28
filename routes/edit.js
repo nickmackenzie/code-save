@@ -42,7 +42,7 @@ router.post('/:id', function (req, res, next) {
             if (err) {
                 console.log(err)
             } else {
-                res.redirect('../snippets')
+                res.redirect('../snippets/')
                 console.log("Updated User : ", docs);
             }
         })

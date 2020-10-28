@@ -1,58 +1,67 @@
 <%- include('../partials/header') %>
-
-<body>
-    <%- include('../partials/nav') %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="parent">
-        <div class="section yellow">
-            <%- include('../partials/panel') %>
-        </div>
-        <div class="grid">
-
-
-            <div id="edit-box">
-                <form action="/edit/<%= edit.id %>" method="POST">
-                    <label class="edit-data" for="name" value="">Name of
-                        snippet:</label><br>
-                    <input name="name" type="text" value="<%= edit.name %>"><br>
-                    <label class="edit-data" for="snippet">Code:</label><br>
-                    <textarea rows="20" cols="40" value=""
-                        name="snippet"><%= edit.snippet %></textarea><br>
-                    </section>
-
-                    <input class="button is-warning" value="Update"
-                        type="submit">
-
-                </form>
-
-            </div>
-
-        </div>
+<%- include('../partials/nav') %>
+<div class="parent">
+    <div class="section yellow">
+        <%- include('../partials/panel') %>
     </div>
+    <div class="grid">
 
-    <script src="/javascripts/waterfall.min.js"></script>
-    <script src="/javascripts/modal.js">
-    </script>
-</body>
+    </div>
+</div>
+<div id="modal-view " class="modal is-active">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Edit a Snippet</p>
+            <button id="close-btn" class="delete" aria-label="close"></button>
+        </header>
+        <section id="modal-content" class="modal-card-body">
+            <form action="/edit/<%= edit.id %>" method="POST">
+
+                <label class="label" for="language">Syntax: </label>
+                <select class="control" name="language">
+                    <div class="select">
+                        <option value="bash">Bash</option>
+                        <option value="c++">C++</option>
+                        <option value="c#" selected>C#</option>
+                        <option value="css" selected>css</option>
+                        <option value="ejs">ejs</option>
+                        <option value="ini">.ini</option>
+                        <option value="java">java</option>
+                        <option value="javascript">javaScript</option>
+                        <option value="json">JSON</option>
+                        <option value="lua">lua</option>
+                        <option value="markdown">Markdown</option>
+                        <option value="php">PHP</option>
+                        <option value="python">Python</option>
+                        <option value="scss">scss</option>
+                        <option value="sql">sql</option>
+                        <option value="swift">Swift</option>
+                        <option value="typescript">Typescript</option>
+                        <option value="css">CSS</option>
+                        <option value="http">http</option>
+                        <option value="nodejs">nodeJs</option>
+                        <option value="ruby">ruby</option>
+                    </div>
+                </select><br>
+
+                <label for="name">Name of snippet:</label><br>
+                <input name="name" type="text" value="<%= edit.name %>"><br>
+                <label for="tags">Tags:</label><br>
+                <input name="tags" type="text"><br>
+                <label for="snippet">Code:</label><br>
+                <textarea rows="15" cols="30"
+                    name="snippet"><%= edit.snippet %></textarea><br>
+                <label>
+                    <input type="checkbox" value="true" name="favorite">
+                    <span class="checkable">Favortite</span>
+                </label><br>
 
 
-</html>
+        </section>
+        <footer class="modal-card-foot">
+            <input class="button is-success" type="submit">
+        </footer>
+        </form>
+    </div>
+</div>

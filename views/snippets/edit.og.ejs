@@ -1,0 +1,58 @@
+<%- include('../partials/header') %>
+
+<body>
+    <%- include('../partials/nav') %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="parent">
+        <div class="section yellow">
+            <%- include('../partials/panel') %>
+        </div>
+        <div class="grid">
+
+
+            <div id="edit-box">
+                <form action="/edit/<%= edit.id %>" method="POST">
+                    <label class="edit-data" for="name" value="">Name of
+                        snippet:</label><br>
+                    <input name="name" type="text" value="<%= edit.name %>"><br>
+                    <label class="edit-data" for="snippet">Code:</label><br>
+                    <textarea rows="20" cols="40" value=""
+                        name="snippet"><%= edit.snippet %></textarea><br>
+                    </section>
+
+                    <input class="button is-warning" value="Update"
+                        type="submit">
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/javascripts/waterfall.min.js"></script>
+    <script src="/javascripts/modal.js">
+    </script>
+</body>
+
+
+</html>

@@ -43,6 +43,13 @@
 
 
         <p class="menu-label">Tags: </p>
+        <div class="tags are-normal ">
+            <% menu.forEach(function(t) { %>
+            <span class="tag is-black">
+                <a href=""> <%= t.categories[0].tags %></a></span>
+            <% }) %>
+        </div>
+
         <ul class="menu-list">
             <div class="log-out">
                 <a class="button is-danger" href="/logout">Log
