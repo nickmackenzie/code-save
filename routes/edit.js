@@ -23,7 +23,7 @@ router.post('/:id', function (req, res, next) {
         },
         function (err, docs) {
             if (err) {
-                console.log(err)
+                res.redirect('error')
             } else {
                 res.redirect('../snippets/')
             }

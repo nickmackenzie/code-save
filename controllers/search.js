@@ -26,9 +26,7 @@ function searchIndex(req, res) {
 
 function tagIndex(req, res) {
     let userId = req.user.googleId
-    console.log("body", req.params.tags)
     let tagName = req.params.tags
-
     Snippets.find({
         google: userId
     }, function (err, menu) {
