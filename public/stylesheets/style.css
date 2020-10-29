@@ -290,3 +290,64 @@ code {
   margin-left: auto;
   cursor: pointer;
 }
+
+#link {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-align: left;
+  align-items: center;
+}
+
+li {
+  align-items: center;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+  #link,
+  #logo,
+  .button,
+  #search,
+  .icon {
+    font-size: .7rem;
+  }
+
+  #logo {
+    font-size: 1.2rem;
+  }
+
+  .tag a {
+    font-size: .6rem
+  }
+
+  .menu-label {
+    font-size: .6rem;
+  }
+
+  .parent {
+    display: grid;
+    grid-template-columns: minmax(100px, 15%) 1fr;
+  }
+
+  .item,
+  #snippet-data {
+    font-size: .6rem
+  }
+
+  .box {
+    max-width: 220px;
+  }
+
+  .delete-btn {
+
+    margin-left: 180px;
+
+  }
+
+  #edit-btn {
+
+    margin-left: 170px;
+
+  }
+}

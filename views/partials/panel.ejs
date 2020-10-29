@@ -1,6 +1,7 @@
 <div id="side-menu" class="menu-wrap">
 
     <% if (user) { %>
+
     <div class="btn-wrap">
         <div class="buttons">
             <button class="button is-warning" id="modal-btn">
@@ -35,7 +36,7 @@
             <% }) %>
             <% let array2 = [...new Set(array1)] %>
             <% array2.forEach(function(m) { %>
-            <li> <a id="link" href="/snippets/<%= m %>"> <img class="icon"
+            <li> <a id="link" href="/snippets/<%= m %>"><img class="icon"
                         src="/images/<%= m %>.svg" alt=""> <%= m %></a>
             </li>
 
