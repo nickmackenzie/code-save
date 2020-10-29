@@ -2,6 +2,8 @@ body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
   overflow-x: hidden;
+  background-color: rgb(32, 32, 32);
+  color: white;
 }
 
 :root {
@@ -12,13 +14,6 @@ body {
   --lght-hover: #4c5575;
 }
 
-
-
-body {
-  background-color: rgb(32, 32, 32);
-
-  color: white;
-}
 
 #logo {
   display: flex;
@@ -120,13 +115,6 @@ h1 {
 }
 
 
-
-
-#last-snippy {
-
-  font-family: 'Courier New', Courier, monospace;
-}
-
 li {
 
   align-items: center;
@@ -150,6 +138,9 @@ code {
   max-width: 600px;
   max-height: 400px;
   min-height: 50px;
+  font-family: 'Poppins', serif;
+
+
 
 }
 
@@ -160,8 +151,6 @@ code {
 }
 
 .snippet-info {
-
-
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -211,6 +200,7 @@ code {
 
 .grid {
   display: flex;
+
 }
 
 #snippet-data {

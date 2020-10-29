@@ -1,9 +1,7 @@
 let Snippets = require('../models/snippets')
 
 function index(req, res) {
-    console.log(req.user.googleId)
     let userId = req.user.googleId
-    console.log(userId)
     Snippets.find({
         google: userId
     }, function (err, menu) {
