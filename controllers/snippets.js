@@ -8,6 +8,9 @@ function index(req, res) {
         Snippets.find({
             google: userId
         }, function (err, snip) {
+            if (err) {
+                res.redirect("index")
+            }
             res.render('snippets/index', {
                 snip,
                 user: req.user,

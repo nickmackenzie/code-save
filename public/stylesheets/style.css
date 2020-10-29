@@ -1,7 +1,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
-  overflow-x: hidden;
+
   background-color: rgb(32, 32, 32);
   color: white;
 }
@@ -133,15 +133,11 @@ li {
   width: 72px;
 }
 
-
 code {
   max-width: 600px;
   max-height: 400px;
   min-height: 50px;
   font-family: 'Poppins', serif;
-
-
-
 }
 
 .delete-btn {
@@ -283,4 +279,14 @@ code {
   justify-content: start;
   padding-bottom: 10px;
   border-bottom: 3px solid white;
+}
+
+.fa-bars {
+  color: white;
+}
+
+.hamburger {
+  padding: 20px;
+  margin-left: auto;
+  cursor: pointer;
 }
