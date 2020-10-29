@@ -1,6 +1,4 @@
 let Snippets = require('../models/snippets')
-let Users = require('../models/users')
-let Languages = require('../models/languages')
 
 function index(req, res) {
     console.log(req.user.googleId)
@@ -43,37 +41,6 @@ function languageIndex(req, res) {
         })
     })
 }
-// function searchIndex(req, res) {
-//     let x = req.params.language
-//     let userId = req.user.googleId
-//     Snippets.find({
-//         google: userId
-//     }, function (err, menu) {
-//         Snippets.find({
-//             name: {
-//                 $regex: /^[a-zA-Z0-9_]*$/
-//             }
-//         }, function (err, snip) {
-//             res.render('snippets/index', {
-//                 snip,
-//                 user: req.user,
-//                 name: req.query.name,
-//                 googleId: req.query.googleId,
-//                 menu: menu
-//             })
-//         })
-//     })
-// }
-
-
-function editSnip(req, res) {
-
-    Snippets.findById(req.params.id, function (err, edit) {
-
-    })
-
-}
-
 
 function addSnip(req, res) {
     for (let key in req.body) {
@@ -114,6 +81,5 @@ module.exports = {
     index,
     addSnip,
     deleteSnip,
-    languageIndex,
-    editSnip
+    languageIndex
 }

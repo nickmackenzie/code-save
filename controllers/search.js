@@ -1,20 +1,16 @@
 let Snippets = require('../models/snippets')
-let Users = require('../models/users')
-let Languages = require('../models/languages')
-
-
 
 function searchIndex(req, res) {
     let userId = req.user.googleId
-    let search = new RegExp(req.query.search)
+    let search = new RegExp(req.query.search) //Creates a pattern so the $regex will be able to use it
     Snippets.find({
         google: userId
     }, function (err, menu) {
         Snippets.find({
             google: userId,
             "name": {
-                $regex: search,
-                $options: 'i',
+                $regex: search, //User input 
+                $options: 'i', //Option 'i" Case insensitivity to match upper and lower cases.
             }
         }, function (err, snip) {
             res.render('snippets/index', {

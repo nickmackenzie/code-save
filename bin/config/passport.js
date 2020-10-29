@@ -1,9 +1,7 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
-// const Snippets = require('../models/snippets');
 const Users = require('../../models/users')
-// const Language = require('../models/languages')
-// configuring Passport!
+
 
 
 passport.use(new GoogleStrategy({
@@ -13,7 +11,7 @@ passport.use(new GoogleStrategy({
         proxy: true
     },
     function (accessToken, refreshToken, profile, cb) {
-        // a user has logged in via OAuth!
+        // finding users who have logged in before
         Users.findOne({
             'googleId': profile.id
         }, function (err, user) {
@@ -28,7 +26,7 @@ passport.use(new GoogleStrategy({
                     return cb(null, user);
                 }
             } else {
-                // we have a new user via OAuth!
+                // new user signing up
                 const newUser = new Users({
                     name: profile.displayName,
                     email: profile.emails[0].value,
