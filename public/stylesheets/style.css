@@ -1,11 +1,3 @@
-/* :root {
-
-  --main-bg: #001f3f;
-  --sec-bg: #043B5B;
-  --hglt-bg: #33A8AB;
-  --main-txt: #0d0d0d;
-  --lght-hover: #4c5575;
-} */
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
@@ -181,14 +173,9 @@ code {
   color: #FAD85B
 }
 
-
-
-
 #snippet-data {
   font-size: 1.6rem;
   margin-left: 10px;
-
-
 }
 
 .fas {
