@@ -21,8 +21,9 @@
                 <input type="submit">
             </form>
         </div>
-        <img class="icon" src="/images/<%= t.language %>.svg" alt="">
-        <span id=snippet-data name="name"><%= t.name %></span>
+        <div class="block-title">
+            <img class="icon" src="/images/<%= t.language %>.svg" alt="">
+            <span id=snippet-data name="name"><%= t.name %></span></div>
         <div class="code-block">
             <pre><code name="snippet" data-lang="<%= t.language %>"><%= t.snippet %></code></pre>
 

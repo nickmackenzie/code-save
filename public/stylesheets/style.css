@@ -20,9 +20,7 @@ body {
   --lght-hover: #4c5575;
 }
 
-html {
-  height: 100vh;
-}
+
 
 body {
   background-color: rgb(32, 32, 32);
@@ -65,7 +63,7 @@ pre {
   font-family: 'Poppins', sans-serif;
   background-color: rgba(0, 0, 0, 0.582);
   color: white;
-  max-width: 350px;
+  max-width: 320px;
   margin: 10px;
   padding: .1rem
 }
@@ -165,7 +163,7 @@ code {
 
 .delete-btn {
   margin-top: 5px;
-  margin-left: 300px;
+  margin-left: 290px;
   position: relative;
 }
 
@@ -188,8 +186,9 @@ code {
 
 #snippet-data {
   font-size: 1.6rem;
-  padding: 0;
-  margin: 0;
+  margin-left: 10px;
+
+
 }
 
 .fas {
@@ -268,8 +267,8 @@ code {
 #edit-btn {
   margin: 6px;
   margin-left: 260px;
-  margin-bottom: 100px;
-  padding-bottom: 100px;
+  margin-top: 12px;
+
   padding: 8px;
   background-color: transparent;
   border: none;
@@ -300,4 +299,11 @@ code {
 
 #circle-btn:hover {
   background-color: #F14668;
+}
+
+.block-title {
+  display: flex;
+  justify-content: start;
+  padding-bottom: 10px;
+  border-bottom: 3px solid white;
 }

@@ -44,10 +44,23 @@
 
         <p class="menu-label">Tags: </p>
         <div class="tags are-normal ">
+            <% let allTags = [] %>
+
             <% menu.forEach(function(t) { %>
+
+            <% t.categories.forEach(function(i) { %>
+            <% allTags.push(i) %>
+
+            <% }) %>
+            <% }) %>
+            <% let uniqueTags = [...new Set(allTags)] %>
+            <% console.log(uniqueTags) %>
+            <% console.log("unique",uniqueTags) %>
+            <% uniqueTags.forEach(function(u) { %>
             <span class="tag is-black">
-                <a href="/search/<%= t.categories %>">
-                    <%= t.categories %></a></span>
+                <a href="/search/<%= u %>">
+                    <%= u %></a></span>
+
             <% }) %>
         </div>
 

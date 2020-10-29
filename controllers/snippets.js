@@ -79,7 +79,7 @@ function addSnip(req, res) {
     for (let key in req.body) {
         if (req.body[key] === '') delete req.body[key]
     };
-    // if (req.body.categories) req.body.categories = req.body.categories.split(' ');
+    if (req.body.categories) req.body.categories = req.body.categories.split(" ")
 
     const snip = new Snippets({
         google: req.user.googleId,
@@ -99,7 +99,7 @@ function deleteSnip(req, res) {
     Snippets.findOne({
         _id: req.params.id
     }, function (err, lan) {
-        res.redirect(`/snippets/${lan.language}`)
+        res.redirect('/snippets/')
     })
     Snippets.deleteOne({
         _id: req.params.id

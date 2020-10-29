@@ -13,7 +13,7 @@ const snippetSchema = new Schema({
         enum: ["bash", "c++", "c#", 'css', "ejs", "html", "ini", "java", "javascript", "json", "lua", "markdown", "php", "python", "scss", "sql", "swift", "text", "typescript", 'http', 'nodejs', 'ruby']
     },
     name: String,
-    categories: String,
+    categories: [],
     favorite: Boolean,
     google: {
         type: Schema.Types.String,

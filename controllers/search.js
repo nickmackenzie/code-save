@@ -38,7 +38,8 @@ function tagIndex(req, res) {
     }, function (err, menu) {
 
         Snippets.find({
-            categories: tagName
+            categories: tagName,
+            google: userId
 
         }, function (err, snip) {
             res.render('snippets/index', {
