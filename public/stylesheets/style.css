@@ -310,6 +310,8 @@ li:hover {
 
   filter: grayscale(0%);
   transform: scale(1.1);
+  animation: e duration timing-function delay iteration-count direction fill-mode;
+  ;
 }
 
 @media only screen and (max-width: 767px) {

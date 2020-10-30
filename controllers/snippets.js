@@ -48,7 +48,6 @@ function addSnip(req, res) {
         if (req.body[key] === '') delete req.body[key]
     };
     if (req.body.categories) req.body.categories = req.body.categories.split(" ")
-
     const snip = new Snippets({
         google: req.user.googleId,
         snippet: req.body.snippet,
