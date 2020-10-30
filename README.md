@@ -15,7 +15,7 @@
 
 **Getting Started:**
 
-[Live Site](code-save.herokuapp.com/)
+[Live Site](https://code-save.herokuapp.com/)
 
 [Source Code](https://github.com/nickmackenzie/code-save)
 
