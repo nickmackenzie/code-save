@@ -1,7 +1,10 @@
+html {
+  background-color: rgb(32, 32, 32);
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
-
   background-color: rgb(32, 32, 32);
   color: white;
 }
@@ -32,8 +35,7 @@ body {
   padding: 4px;
 }
 
-.navbar {
-
+nav {
   background-color: rgb(54, 54, 54);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
 }
@@ -92,7 +94,7 @@ label {
 }
 
 .menu {
-  height: 100vh;
+  height: 82vh;
   color: white;
 }
 
@@ -300,8 +302,15 @@ code {
 
 li {
   align-items: center;
+  filter: grayscale(100%);
 }
 
+
+li:hover {
+
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
 
 @media only screen and (max-width: 767px) {
 

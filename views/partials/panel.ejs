@@ -36,8 +36,9 @@
             <% }) %>
             <% let array2 = [...new Set(array1)] %>
             <% array2.forEach(function(m) { %>
-            <li> <a id="link" href="/snippets/<%= m %>"><img class="icon"
-                        src="/images/<%= m %>.svg" alt=""> <%= m %></a>
+            <li> <a id="link" href="/snippets/<%= m %>"><img id="side-icon"
+                        class="icon" src="/images/<%= m %>.svg" alt="">
+                    <%= m %></a>
             </li>
 
             <% }) %>
