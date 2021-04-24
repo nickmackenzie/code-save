@@ -1,9 +1,12 @@
 {
   "name": "snips",
-  "version": "0.0.0",
+  "version": "0.0.2",
+  "engines": {
+    "node": "15.14.0"
+  },
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "nodemon app"
   },
   "dependencies": {
     "@creativebulma/bulma-collapsible": "^1.0.4",
