@@ -1,4 +1,4 @@
-<nav id="nav-wrap">
+<nav class="navbar" id="nav-wrap">
   <div id="logo">
     <span class="has-text-weight-bold" id="logo">
       <div class="snippy">save</div>
@@ -7,5 +7,18 @@
       </div>
     </span>
   </div>
-  <button id="theme" onclick="switchTheme()">Dark</button>
+
+  <div class="navbar-end">
+    <div class="navbar-item">
+      <div class="buttons">
+        <a class="button is-danger m-2" href="/logout">Log Out</a>
+        <p id="theme" class="m-1">Dark Mode</p>
+
+        <label class="switch m-2">
+          <input type="checkbox" onclick="switchTheme()" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
 </nav>
