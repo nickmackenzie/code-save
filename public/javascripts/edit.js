@@ -1,4 +1,3 @@
-let editBtn = document.getElementById('edit')
+let editBtn = document.getElementById("edit");
 
-
-editBtn.addEventListener('click', editBlock)
+editBtn.addEventListener("click", editBlock);

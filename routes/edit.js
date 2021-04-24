@@ -1,11 +1,10 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
-var editCntrl = require('../controllers/edit')
+var editCntrl = require("../controllers/edit");
 
+router.get("/:id", editCntrl.editIndex);
 
-router.get('/:id', editCntrl.editIndex)
-
-router.post('/:id', editCntrl.submitEdit)
+router.post("/:id", editCntrl.submitEdit);
 
 module.exports = router;

@@ -1,29 +1,26 @@
 html {
-  background-color: rgb(32, 32, 32);
+  /* background-color: rgb(32, 32, 32); */
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   height: 100vh;
-  background-color: rgb(32, 32, 32);
-  color: white;
 }
 
 :root {
-  --main-bg: #001f3f;
-  --sec-bg: #043B5B;
-  --hglt-bg: #33A8AB;
+  --main-bg: #ffffff;
+  --sec-bg: #adadad;
+  --hglt-bg: #33a8ab;
   --main-txt: #0d0d0d;
   --lght-hover: #4c5575;
 }
-
 
 #logo {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 4px;
-  color: white;
+
   letter-spacing: 2px;
   font-size: 1.8rem;
 }
@@ -36,25 +33,21 @@ body {
 }
 
 nav {
-  background-color: rgb(54, 54, 54);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
-
-
 
 pre {
   margin: 0;
   padding: 0;
-
 }
 
 .box {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: rgba(0, 0, 0, 0.582);
   color: white;
   max-width: 320px;
   margin: 10px;
-  padding: .1rem
+  padding: 0.1rem;
 }
 
 label {
@@ -82,20 +75,17 @@ label {
   grid-template-columns: minmax(150px, 15%) 1fr;
 }
 
-
 .menu-wrap {
-  background-color: rgb(46, 45, 45);
-  color: white;
+  /* background-color: rgb(46, 45, 45);
+  color: white; */
 }
 
 .yellow {
   padding: 0;
-
 }
 
 .menu {
   height: 82vh;
-  color: white;
 }
 
 .menu-label {
@@ -108,7 +98,6 @@ label {
 }
 
 .menu-list {
-
   color: white;
 }
 
@@ -116,9 +105,7 @@ h1 {
   color: black;
 }
 
-
 li {
-
   align-items: center;
   text-transform: capitalize;
   color: white;
@@ -139,7 +126,7 @@ code {
   max-width: 600px;
   max-height: 400px;
   min-height: 50px;
-  font-family: 'Poppins', serif;
+  font-family: "Poppins", serif;
 }
 
 .delete-btn {
@@ -157,7 +144,7 @@ code {
 }
 
 #yellow {
-  color: #FAD85B
+  color: #fad85b;
 }
 
 #snippet-data {
@@ -174,7 +161,6 @@ code {
   color: white;
 }
 
-
 .log-out {
   display: flex;
   align-items: center;
@@ -182,28 +168,26 @@ code {
 }
 
 #search {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 #search::placeholder {
   color: black;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
 #search:focus {
-  border: 3px solid #FAD85B;
+  border: 3px solid #fad85b;
   opacity: 1;
 }
 
 .grid {
   display: flex;
-
 }
 
 #snippet-data {
   font-size: 1rem;
-
 }
 
 .edit-form {
@@ -218,7 +202,7 @@ code {
 
 .fa-sign-in-alt {
   margin: 10px;
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .fa-sign-in-alt:hover {
@@ -230,12 +214,12 @@ code {
 }
 
 #edit-box {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: rgba(0, 0, 0, 0.582);
   color: white;
   max-width: 350px;
   margin: 10px;
-  padding: .4rem;
+  padding: 0.4rem;
   text-align: center;
 }
 
@@ -271,9 +255,8 @@ code {
   text-transform: uppercase;
 }
 
-
 #circle-btn:hover {
-  background-color: #F14668;
+  background-color: #f14668;
 }
 
 .block-title {
@@ -305,23 +288,20 @@ li {
   filter: grayscale(100%);
 }
 
-
 li:hover {
-
   filter: grayscale(0%);
   transform: scale(1.1);
-  animation: e duration timing-function delay iteration-count direction fill-mode;
-  ;
+  animation: e duration timing-function delay iteration-count direction
+    fill-mode;
 }
 
 @media only screen and (max-width: 767px) {
-
   #link,
   #logo,
   .button,
   #search,
   .icon {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 
   #logo {
@@ -329,11 +309,11 @@ li:hover {
   }
 
   .tag a {
-    font-size: .6rem
+    font-size: 0.6rem;
   }
 
   .menu-label {
-    font-size: .6rem;
+    font-size: 0.6rem;
   }
 
   .parent {
@@ -343,7 +323,7 @@ li:hover {
 
   .item,
   #snippet-data {
-    font-size: .6rem
+    font-size: 0.6rem;
   }
 
   .box {
@@ -351,14 +331,19 @@ li:hover {
   }
 
   .delete-btn {
-
     margin-left: 180px;
-
   }
 
   #edit-btn {
-
     margin-left: 170px;
-
   }
+}
+
+[data-theme="dark"],
+[data-theme="dark"] html {
+  color: white;
+  background: black;
+}
+
+[data-theme="light"] #theme {
 }
