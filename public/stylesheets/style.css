@@ -340,12 +340,18 @@ li:hover {
 }
 
 [data-theme="dark"],
-[data-theme="dark"] html {
+[data-theme="dark"] .grid {
   color: white;
   background: black;
 }
+[data-theme="dark"],
+[data-theme="dark"] #logo {
+  color: black !important;
+}
 
 [data-theme="light"] #theme {
+  color: black;
+  background: white;
 }
 /* The switch - the box around the slider */
 .switch {

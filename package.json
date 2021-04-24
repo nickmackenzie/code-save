@@ -20,6 +20,7 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "express-session": "^1.17.1",
+    "heroku": "^7.2.0",
     "http-errors": "~1.6.3",
     "method-override": "^3.0.0",
     "monaco-editor": "^0.23.0",

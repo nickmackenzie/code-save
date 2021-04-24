@@ -31,3 +31,9 @@ function switchTheme() {
   // update theme
   setTheme();
 }
+
+let editBtn = document.getElementById("#editBtn");
+
+editBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+});
