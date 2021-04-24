@@ -2,7 +2,8 @@
   "name": "snips",
   "version": "0.0.2",
   "engines": {
-    "node": "15.14.0"
+    "node": "15.x",
+    "npm":"6.x"
   },
   "private": true,
   "scripts": {
