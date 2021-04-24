@@ -20,6 +20,8 @@
             <form action="/edit/<%= edit.id %>" method="POST">
                 <label for="name">Name of snippet:</label><br>
                 <input name="name" type="text" value="<%= edit.name %>"><br>
+                <label for="categories">Tags</label><br>
+                <input name="categories" type="text" value="<%= edit.categories %>"><br>
                 <label for="snippet">Code:</label><br>
                 <textarea rows="15" cols="30"
                     name="snippet"><%= edit.snippet %></textarea><br>

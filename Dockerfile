@@ -1,4 +1,4 @@
 FROM node:14
 COPY . .
-EXPOSE 8080
-CMD [ "node", "server.js" ]
+EXPOSE 9393
+CMD [ "node", "app.js" ]
