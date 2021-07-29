@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
-  },
+    },
   "dependencies": {
     "@creativebulma/bulma-collapsible": "^1.0.4",
     "axios": "^0.21.0",
