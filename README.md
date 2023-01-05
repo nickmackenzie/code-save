@@ -18,7 +18,7 @@ A code snippet manager.
 
 **Getting Started:**
 
-[Live Site](https://code-save.herokuapp.com/)
+[Live Site](https://code-save-yrek.onrender.com/)
 
 [Source Code](https://github.com/nickmackenzie/code-save)
 
